@@ -162,7 +162,7 @@ def unknown(update: Update, context: CallbackContext) -> None:
     update.message.reply_text("Извините, я не понимаю эту команду.\nНапишите сначала /start")
 
 def main() -> None:
-    # Замените 'YOUR_BOT_TOKEN' на токен вашего бота
+    
     updater = Updater(token='6297955354:AAGN-1mDkpxFcviDRyZJ6qwuNj596zTCKhU', use_context=True)
 
 
