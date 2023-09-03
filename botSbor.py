@@ -103,15 +103,15 @@ def zayvka(update: Update, context: CallbackContext) -> int:
     
     return AWAITING_TEXT
 
-def stop_bot(update: Update, context: CallbackContext) -> None:
-    user = update.message.from_user
+# def stop_bot(update: Update, context: CallbackContext) -> None:
+#     user = update.message.from_user
 
-    # Проверьте, что это сообщение отправлено администратором (или нужным пользователем)
-    if user.username == 'kng109':  # Замените 'YOUR_ADMIN_USERNAME' на имя вашего администратора
-        update.message.reply_text("Бот остановлен.")
-        update.stop()  # Остановите бота
-    else:
-        update.message.reply_text("У вас нет доступа к этой команде.")
+#     # Проверьте, что это сообщение отправлено администратором (или нужным пользователем)
+#     if user.username == 'kng109':  # Замените 'YOUR_ADMIN_USERNAME' на имя вашего администратора
+#         update.message.reply_text("Бот остановлен.")
+#         update.stop()  # Остановите бота
+#     else:
+#         update.message.reply_text("У вас нет доступа к этой команде.")
 
 # Функция для обработки текстовых сообщений (заявок)
 def handle_text(update: Update, context: CallbackContext) -> int:
@@ -185,7 +185,7 @@ def main() -> None:
     dp.add_handler(CommandHandler('kng222', kng222))
     dp.add_handler(CommandHandler('primer', primer))
     dp.add_handler(CommandHandler('zayvka', zayvka))
-    dp.add_handler(CommandHandler('stopbotkingomoron1', stop_bot))
+    # dp.add_handler(CommandHandler('stopbotkingomoron1', stop_bot))
     dp.add_handler(MessageHandler(Filters.command, unknown))
 
     updater.start_polling()
